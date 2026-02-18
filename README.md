@@ -1,0 +1,1 @@
+Esta extensión la hice porque no podía editar de manera dinamica los cms de mis clientes

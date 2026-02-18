@@ -1,0 +1,28 @@
+{
+    "name": "edado/advanced-cms",
+    "description": "Bagisto CMS extendido con editor estructurado añadido",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edgardo",
+            "email": "cabelloedg@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edado\\AdvancedCMS\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Edado\\AdvancedCMS\\Providers\\AdvancedCMSServiceProvider"
+            ]
+        }
+    }
+}
