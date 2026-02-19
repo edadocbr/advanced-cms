@@ -13,6 +13,7 @@ class AdvancedCMSServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
 
         //Load views
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views/shop', 'shop');
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'advanced_cms');
 
         //load Translate
@@ -24,7 +25,7 @@ class AdvancedCMSServiceProvider extends ServiceProvider
         //php artisan vendor:publish --all
         $this->publishes([
             __DIR__ . '/../Resources/views' => resource_path('views/vendor/advanced_cms'),
-        ]);
+        ], 'advanced-cms');
 
     }
 
@@ -41,8 +42,10 @@ class AdvancedCMSServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
-        \Webkul\Admin\Http\Controllers\CMS\PageController::class, 
-        \Edado\AdvancedCMS\Http\Controllers\PageController::class
-    );
+            \Webkul\Admin\Http\Controllers\CMS\PageController::class, 
+            \Edado\AdvancedCMS\Http\Controllers\PageController::class
+        );
+        
+        
     }
 }
