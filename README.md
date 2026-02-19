@@ -8,6 +8,12 @@ php artisan migrate
 php artisan optimize:clear
 ```
 
+Si deseas modificar el diseño del editor o las vistas del frontend, puedes publicar los archivos de vista en tu proyecto:
+
+```bash
+php artisan vendor:publish --tag=advanced-cms
+```
+
 ## 📖 Instrucciones de Uso
 
 Navega al panel de administración de Bagisto.
